@@ -1,0 +1,106 @@
+#:import MDDropdownMenu kivymd.uix.menu.MDDropdownMenu
+#:import Image kivy.uix.image.Image
+
+<Manual>:
+    MDFloatLayout:
+        cols: 10
+
+        # image du tracking
+        Image:
+            id: track_manual_image
+            size_hint_x: 1.5
+            size_hint_y: 1
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+
+        # button to display menu
+        MDRaisedButton:
+            id: menu
+            text: "Menu"
+            pos_hint: {"center_x": .1, "center_y": .9}
+            on_release: root.dropdown(self)
+            radius: 15
+            text_color: 0, 0, 0, 1
+
+
+        # CAMERA ICON
+        MDIconButton:
+            cols: 5
+            pos_hint: {"center_x": .45, "center_y": .9}
+            icon: "camera"
+            icon_size: "200sp"
+
+        # VIDEO ICON
+        MDIconButton:
+            cols: 5
+            pos_hint: {"center_x": .55, "center_y": .9}
+            icon: "video"
+            icon_size: "200sp"
+
+        # SWITCH BUTTON
+        MDFillRoundFlatIconButton:
+            icon: "autorenew"
+            text: "Switch"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0, 1
+            line_color: 1, 0, 1, 1
+            theme_icon_color: "Custom"
+            icon_color: 0, 0, 1, .5
+            pos_hint: {"center_x": .9, "center_y": .9}
+            # theme_icon_color:
+
+        # TAKE-OFF BUTTON
+        MDFillRoundFlatIconButton:
+            icon: "arrow-up-thick"
+            text: "TAKE OFF"
+            theme_text_color: "Custom"
+            text_color: 0, 0, 0, 1
+            theme_icon_color: "Custom"
+            icon_color: 1, 1, 1, .5
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: .2, .2
+            # theme_icon_color:
+
+        MDLabel:
+            text: "Photo"
+            font_size: 12
+            pos_hint: {"center_x": 0.93, "center_y": .84}
+            text_color: 1, 0, 0, 1
+
+        MDLabel:
+            text: "Video"
+            font_size: 12
+            pos_hint: {"center_x": 1.02, "center_y": .84}
+            text_color: 1, 0, 0, 1
+
+        MDRaisedButton:
+            id: menu
+            text: "Left"
+            pos_hint: {"center_x": .1, "center_y": .25}
+            on_release: root.open_menu()
+            radius: 15
+            text_color: 0, 0, 0, 1
+
+        MDRaisedButton:
+            id: menu
+            text: "Right"
+            pos_hint: {"center_x": .1, "center_y": .1}
+            on_release: root.open_menu()
+            radius: 15
+            text_color: 0, 0, 0, 1
+
+        MDRaisedButton:
+            id: menu
+            text: "up"
+            pos_hint: {"center_x": .9, "center_y": .25}
+            on_release: root.open_menu()
+            radius: 15
+            text_color: 0, 0, 0, 1
+
+        MDRaisedButton:
+            id: menu
+            text: "down"
+            pos_hint: {"center_x": .9, "center_y": .1}
+            on_release: root.open_menu()
+            radius: 15
+            text_color: 0, 0, 0, 1
